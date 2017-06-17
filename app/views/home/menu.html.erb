@@ -1,6 +1,12 @@
-<h1> HB RESTAURANT MENU</h1>
+<h1 xmlns="http://www.w3.org/1999/html"> HB RESTAURANT MENU</h1>
   <div class="btn-group">
+  <ul class="nav nav-pills"
+    <li class="nav-items">
   <% @sections.each do |section| %>
-    <%= link_to section.name, menu_path(section_name: section.name), class: "btn #{params[:section_id] == section.name ? 'btn-primary' : 'btn-secondary' }"%>
+    <%= link_to section.name, menu_path(section_name: section.name),
+                class: "nav-link #{'active' if params[:section_name] == section.name}"%>
   <% end %>
+    </li>
+  </ul>
+
   </div>
