@@ -21,14 +21,12 @@
   <% end %>
 </div>
 
-
-
-
 <% @food_items.each do |item| %>
     <div class="card">
       <div class="card-block">
         <h4 class="card-title" style="align-content: center"><%= item.name %></h4>
         <h6 class="card-subtitle mb-2 text-muted"><%= item.description %></h6>
+        <h6 class="card-subtitle mb-2 text-muted"><%= "#{item.price} vnđ"%></h6>
         <div> <%= image_tag item.image_ur_or_default, :size => "400x300" %></p> </div>
     </div>
 <% end %>

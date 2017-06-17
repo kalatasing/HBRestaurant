@@ -1,0 +1,46 @@
+<h1> THANKS FOR YOUR ORDER</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @order.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @order.address %>
+</p>
+
+<p>
+  <strong>Food item:</strong>
+  <%= @order.food_item.name %>
+</p>
+
+<p>
+  <strong>Unit Price:</strong>
+  <%= number_to_currency @order.food_item.price, unit: 'VND', format: '%n %u'%>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @order.quality %>
+</p>
+
+<p>
+  <strong>Total cost:</strong>
+  <%= number_to_currency @order.total_cost, unit: 'VND', format: '%n %u'%><br>
+  <i>This included delivery fee of 20,000 vnd</i>
+</p>
+
+<p>
+  <strong>Order created:</strong>
+  <%= @order.created_at %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

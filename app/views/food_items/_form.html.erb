@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :section_name %>
-    <%= form.collection_select :section_id, Section.order(:id),:id,:name, include_blank: true %>
+    <%= form.collection_select :section_id, Section.order(:id),:id,:name, include_blank: false %>
   </div>
 
   <div class="actions">
