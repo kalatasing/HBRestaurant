@@ -3,10 +3,32 @@
   <ul class="nav nav-pills"
     <li class="nav-items">
   <% @sections.each do |section| %>
-    <%= link_to section.name, menu_path(section_name: section.name),
-                class: "nav-link #{'active' if params[:section_name] == section.name}"%>
+    <%= link_to section.name, menu_path(section: section.name),
+                class: "nav-link #{'active' if params[:section] == section.name}"%>
   <% end %>
     </li>
   </ul>
-
   </div>
+
+<div class='card card-block'>
+  <%= form_tag nil, method: 'get' do %>
+      <%= hidden_field_tag :section, params[:section]%>
+      <div class='form-inline'>
+        <%= select_tag :sort_column,  options_for_select([['Name', 'name'], ['Price', 'price']], params[:sort_column]), class: 'form-control'%>
+        <%= select_tag :sort_direction, options_for_select([['Ascending', 'asc'], ['Desending', 'desc']], params[:sort_direction]), class: 'form-control' %>
+        <%= submit_tag 'Apply', class: 'btn btn-secondary' %>
+      </div>
+  <% end %>
+</div>
+
+
+
+
+<% @food_items.each do |item| %>
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title" style="align-content: center"><%= item.name %></h4>
+        <h6 class="card-subtitle mb-2 text-muted"><%= item.description %></h6>
+        <div> <%= image_tag item.image_ur_or_default, :size => "400x300" %></p> </div>
+    </div>
+<% end %>
