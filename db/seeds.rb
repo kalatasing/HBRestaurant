@@ -1,10 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'json'
+require 'open-uri'
+
+
+
 
 if Section.count == 0
   %w(Breakfast Lunch Dinner Drinks).each do |name|
@@ -12,4 +10,38 @@ if Section.count == 0
   end
 end
 
+10.times do |i|
+  FoodItem.create!(
+              name: Faker::Food.ingredient,
+              description: Faker::Food.ingredient,
+              price: Faker::Number.decimal(2),
+              section_id: Section.first.id
+  )
+  end
 
+10.times do |i|
+  FoodItem.create!(
+      name: Faker::Food.ingredient,
+      description: Faker::Food.ingredient,
+      price: Faker::Number.decimal(2),
+      section_id: Section.second.id
+  )
+end
+
+10.times do |i|
+  FoodItem.create!(
+      name: Faker::Food.ingredient,
+      description: Faker::Food.ingredient,
+      price: Faker::Number.decimal(2),
+      section_id: Section.third.id
+  )
+end
+
+10.times do |i|
+  FoodItem.create!(
+      name: Faker::Food.ingredient,
+      description: Faker::Food.ingredient,
+      price: Faker::Number.decimal(2),
+      section_id: Section.fourth.id
+  )
+end

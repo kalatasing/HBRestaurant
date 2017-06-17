@@ -41,7 +41,6 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
-
     total_cost_calculator
     respond_to do |format|
       if @order.update(order_params)
