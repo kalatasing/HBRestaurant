@@ -11,3 +11,5 @@ if Section.count == 0
     Section.create(name: name)
   end
 end
+
+
