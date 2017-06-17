@@ -14,7 +14,7 @@ end
   FoodItem.create!(
               name: Faker::Food.ingredient,
               description: Faker::Food.ingredient,
-              price: Faker::Number.decimal(2),
+              price: Faker::Number.decimal(5),
               section_id: Section.first.id
   )
   end
@@ -23,7 +23,7 @@ end
   FoodItem.create!(
       name: Faker::Food.ingredient,
       description: Faker::Food.ingredient,
-      price: Faker::Number.decimal(2),
+      price: Faker::Number.decimal(5),
       section_id: Section.second.id
   )
 end
@@ -32,7 +32,7 @@ end
   FoodItem.create!(
       name: Faker::Food.ingredient,
       description: Faker::Food.ingredient,
-      price: Faker::Number.decimal(2),
+      price: Faker::Number.decimal(5),
       section_id: Section.third.id
   )
 end
@@ -41,7 +41,7 @@ end
   FoodItem.create!(
       name: Faker::Food.ingredient,
       description: Faker::Food.ingredient,
-      price: Faker::Number.decimal(2),
+      price: Faker::Number.decimal(5),
       section_id: Section.fourth.id
   )
 end
