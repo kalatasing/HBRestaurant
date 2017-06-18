@@ -21,12 +21,45 @@
   <% end %>
 </div>
 
-<% @food_items.each do |item| %>
-    <div class="card">
-      <div class="card-block">
-        <h4 class="card-title" style="align-content: center"><%= item.name %></h4>
-        <h6 class="card-subtitle mb-2 text-muted"><%= item.description %></h6>
-        <h6 class="card-subtitle mb-2 text-muted"><%= "#{item.price} vnđ"%></h6>
-        <div> <%= image_tag item.image_ur_or_default, :size => "400x300" %></p> </div>
-    </div>
+
+<% @food_items.each.with_index do |item, index| %>
+    <% if index.even? %>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title" style="align-content: center"><%= link_to item.name, food_item_path(id: item.id) %></h4>
+                <h6 class="card-subtitle mb-2 text-muted"><%= item.description %></h6>
+                <h6 class="card-subtitle mb-2 text-muted"><%= "#{item.price} vnđ"%></h6>
+
+
+                <%= image_tag item.image_ur_or_default, :size => "200x200" %></p>
+                <%= form_tag(orders_new_path, :method => "post", id: "search-form", :class => 'form-inline my-2 my-lg-0' ) do %>
+                    <%= hidden_field_tag :food_item, item.id%>
+                    <%= submit_tag "Order Now", class: "btn btn-secondary" %>
+                <% end %>
+              </div>
+
+            </div>
+          </div>
+    <% else %>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title" style="align-content: center"><%= link_to item.name, food_item_path(id: item.id) %></h4>
+              <h6 class="card-subtitle mb-2 text-muted"><%= item.description %></h6>
+              <h6 class="card-subtitle mb-2 text-muted"><%= "#{item.price} vnđ"%></h6>
+
+
+              <%= image_tag item.image_ur_or_default, :size => "200x200" %></p>
+              <%= form_tag(orders_new_path, :method => "post", id: "search-form", :class => 'form-inline my-2 my-lg-0' ) do %>
+                  <%= hidden_field_tag :food_item, item.id%>
+                  <%= submit_tag "Order Now", class: "btn btn-secondary" %>
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+        </div>
+    <% end %>
 <% end %>

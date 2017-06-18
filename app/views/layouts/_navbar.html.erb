@@ -13,16 +13,17 @@
         <%= link_to "Contact US", home_contact_us_path	, class: 'nav-link' %>
       </li>
       <li class="nav-item active">
-        <%= link_to "Place your Order", orders_path	, class: 'nav-link' %>
+        <%= link_to "Place your Order", new_order_path	, class: 'nav-link' %>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <%= form_tag menu_path, :method => 'get', class: 'input-group'  do %>
-        <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Search for...' %>
-        <%= submit_tag "Search", class: "btn btn-default" %>
+
+      <%= form_tag(menu_path, :method => "get", id: "search-form", :class => 'form-inline my-2 my-lg-0' ) do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search foods & drinks", class: "form-control mr-sm-2" %>
+          <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
       <% end %>
 
-    </form>
   </div>
 </nav>
+
+
 

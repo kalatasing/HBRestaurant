@@ -16,14 +16,13 @@
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= @food_item.image_url %>
+  <strong>Section:</strong>
+  <%= @food_item.section.name %>
 </p>
 
 <p>
-  <strong>Section:</strong>
-  <%= @food_item.section %>
+  <%= image_tag @food_item.image_ur_or_default %>
 </p>
 
-<%= link_to 'Edit', edit_food_item_path(@food_item) %> |
-<%= link_to 'Back', food_items_path %>
+
+<strong><%= link_to 'Back', food_items_path %></strong>

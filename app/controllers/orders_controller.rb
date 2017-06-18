@@ -44,6 +44,7 @@ class OrdersController < ApplicationController
     total_cost_calculator
     respond_to do |format|
       if @order.update(order_params)
+        @order.save
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { render :show, status: :ok, location: @order }
       else

@@ -39,7 +39,7 @@
 
 <p>
   <strong>Order created:</strong>
-  <%= @order.created_at %>
+  <%= @order.created_at.strftime("%A %H:%M [%b %d, %Y]") %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |

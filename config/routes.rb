@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'orders/new'     => 'orders#new'
   resources :orders
   resources :food_items
   root 'home#index'

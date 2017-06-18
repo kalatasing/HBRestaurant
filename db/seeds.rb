@@ -10,7 +10,7 @@ if Section.count == 0
   end
 end
 
-10.times do |i|
+5.times do |i|
   FoodItem.create!(
               name: Faker::Food.ingredient,
               description: Faker::Food.ingredient,
@@ -19,7 +19,7 @@ end
   )
   end
 
-10.times do |i|
+5.times do |i|
   FoodItem.create!(
       name: Faker::Food.ingredient,
       description: Faker::Food.ingredient,
@@ -28,7 +28,7 @@ end
   )
 end
 
-10.times do |i|
+5.times do |i|
   FoodItem.create!(
       name: Faker::Food.ingredient,
       description: Faker::Food.ingredient,
@@ -37,7 +37,7 @@ end
   )
 end
 
-10.times do |i|
+5.times do |i|
   FoodItem.create!(
       name: Faker::Food.ingredient,
       description: Faker::Food.ingredient,
