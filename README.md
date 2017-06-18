@@ -2,11 +2,11 @@
 
 **HB Restaurant** is a Ruby on Rails restaurant website let users order foods.
 
-Submitted by: **Your Name**
+Submitted by: **Luan Ta**
 
-Time spent: **XX** hours spent in total
+Time spent: **24** hours spent in total
 
-URL: **heroku-app-url**
+URL: **https://mysterious-meadow-49233.herokuapp.com**
 
 ## User Stories
 
@@ -30,7 +30,7 @@ URL: **heroku-app-url**
 * [x] User should be able to filter by section of Breakfast, Lunch, Dinner, or Drinks and see only the relevant items.
 * [x] User can sort menu items by “alphabetical”, “price low to high”, and “price high to low”.
 * [x] User should be able to search for a menu item and see results.
-* [ ] Clicking on an item in the menu brings up its detail, where you see the description and a larger picture.
+* [x] Clicking on an item in the menu brings up its detail, where you see the description and a larger picture.
 * [x] User can click “order” on a menu item to go to a “Create Order” page.
 * [x] User is able to fill in their name, phone number, and address.
 * [x] User is taken to a “Thank you for your order page” that lists the name of item, the total cost (delivery should cost 20,000 VND), the user’s name, the user’s address, and the time the order was created in human-readable format (for example, Tuesday, December 1, 15:25).
@@ -51,20 +51,28 @@ The following **additional** features are implemented:
 * [ ] Something nice you added.
 
 The following **known issues**:
+1. Not yet added many food item for single order
+2. UI not proper designed (this is since I have zero knowledge on front end developing)
 
 * List bugs or things that don't work yet
+1. Order button from Menu bar cannot send params to order form
+2. Edit order twice to update total cost calculation
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](path-to-your-GIF-file)
+![Video Walkthrough](/Walkthrough/Assignment1_demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+Since I'm not a experienced developer, so everything take up much more time compare to others
+However I have had many supports from my co-worker and class mate to complete basic requirement for this Assignment
+Especially I have no knowledge on front end such as html, css etc.
 
 ## License
 
